@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+_CRT_SECURE_NO_WARNINGS	.\main.c	1;"	d	file:
+cache	.\main.c	/^char cache[9][9][9];$/;"	v
+copyBoard	.\main.c	/^void copyBoard(char copy[][9], char** board) {$/;"	f
+getSquare	.\main.c	/^int getSquare(int row, int column) {$/;"	f
+main	.\main.c	/^int main(int argc, char** argv) {$/;"	f
+makeAGuess	.\main.c	/^bool makeAGuess(char** board, int row, int col, int val) {$/;"	f
+makeGuessesUntilSolved	.\main.c	/^bool makeGuessesUntilSolved(char** board) {$/;"	f
+nonEmpty	.\main.c	/^int nonEmpty;$/;"	v
+restoreBoard	.\main.c	/^void restoreBoard(char** board, char copy[][9]) {$/;"	f
+solveCell	.\main.c	/^bool solveCell(char** board, int row, int col, int sqr) {$/;"	f
+solveSudoku	.\main.c	/^void solveSudoku(char** board, int boardSize, int* boardColSize) {$/;"	f
+takeCell	.\main.c	/^bool takeCell(char** board, int row, int col, int sqr, int val) {$/;"	f
+takeColumn	.\main.c	/^bool takeColumn(char** board, int col, int val) {$/;"	f
+takeNeighbors	.\main.c	/^bool takeNeighbors(char** board, int row, int col, int sqr, int val) {$/;"	f
+takeRow	.\main.c	/^bool takeRow(char** board, int row, int val) {$/;"	f
+takeSquare	.\main.c	/^bool takeSquare(char** board, int sqr, int val) {$/;"	f
+taken	.\main.c	/^bool taken[9][9][9];$/;"	v
+takenCnt	.\main.c	/^char takenCnt[9][9];$/;"	v
