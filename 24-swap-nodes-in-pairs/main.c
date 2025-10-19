@@ -43,6 +43,7 @@ int main(int argc, char* argv[]) {
 		node->val = num;
 		offset += charsRead;
 	}
+	node->next = NULL;
 	node = swapPairs(dummyHead.next);
 	while (node != NULL) {
 		printf("%d ", node->val);
