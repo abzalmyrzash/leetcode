@@ -2,27 +2,40 @@
 #include <stdio.h>
 #include <string.h>
 
-int strStr(char* h, char* n) {
-	int i, j, f, f2;
-	for (i = 0; h[i] != '\0';) {
-		if (h[i] == n[0]) {
-		search:
-			f = i;
-			f2 = 0;
-			j = 0;
-			do {
-				i++; j++;
-				if (n[j] == '\0') return f;
-				if (h[i] == n[0] && f2 == 0) {
-					f2 = i;
-				}
-			} while(h[i] == n[j]);
-			if (f2 > 0) {
-				i = f2;
-				goto search;
+void kmpTable(char* s, int len, int* T) {
+	T[0] = -1;
+	int i = 1, j = 0;
+	while (i < len) {
+		if (s[i] == s[j]) T[i] = T[j];
+		else {
+			T[i] = j;
+			while (j >= 0 && s[i] != s[j]) {
+				j = T[j];
 			}
+		}
+		i++; j++;
+	}
+	// T[len] = j;
+}
+
+int strStr(char* hay, char* n) {
+	int hayLen = strlen(hay);
+	int nLen = strlen(n);
+	int T[nLen];
+	kmpTable(n, nLen, T);
+	for (int i = 0; i < nLen; i++) {
+		printf("%d ", T[i]);
+	} printf("\n");
+	int i = 0, j = 0;
+	while (i < hayLen) {
+		if (hay[i] == n[j]) {
+			i++; j++;
+			if (j == nLen) return i - j;
 		} else {
-			i++;
+			j = T[j];
+			if (j < 0) {
+				i++; j++;
+			}
 		}
 	}
 	return -1;
