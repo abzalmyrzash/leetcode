@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include "readargs.h"
 #include <stdarg.h>
 #include <stdbool.h>
